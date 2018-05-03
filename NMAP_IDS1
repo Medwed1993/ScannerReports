@@ -1,0 +1,102 @@
+Starting Nmap 7.60 ( https://nmap.org ) at 2018-04-26 09:06 EDT
+Nmap scan report for 192.168.234.130
+Host is up (0.41s latency).
+Not shown: 90 closed ports
+PORT     STATE    SERVICE       VERSION
+135/tcp  open     msrpc         Microsoft Windows RPC
+139/tcp  open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open     microsoft-ds  Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+514/tcp  filtered shell
+1025/tcp open     msrpc         Microsoft Windows RPC
+1026/tcp open     LSA-or-nterm?
+1027/tcp open     msrpc         Microsoft Windows RPC
+1028/tcp open     unknown
+1029/tcp open     ms-lsa?
+5357/tcp open     http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+Device type: general purpose
+Running: Microsoft Windows XP|7|2012
+OS CPE: cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2012
+OS details: Microsoft Windows XP SP3, Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012
+Service Info: Host: SKIF-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 192.168.234.131
+Host is up (0.11s latency).
+Not shown: 82 closed ports
+PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          vsftpd 2.3.4
+22/tcp   open  ssh          OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet       Linux telnetd
+25/tcp   open  smtp         Postfix smtpd
+53/tcp   open  domain       ISC BIND 9.4.2
+80/tcp   open  http         Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn  Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+513/tcp  open  login?
+514/tcp  open  shell?
+2049/tcp open  rpcbind
+2121/tcp open  ccproxy-ftp?
+3306/tcp open  mysql?
+5432/tcp open  postgresql   PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc          VNC (protocol 3.3)
+6000/tcp open  X11          (access denied)
+8009/tcp open  ajp13        Apache Jserv (Protocol v1.3)
+Aggressive OS guesses: Actiontec MI424WR-GEN3I WAP (99%), DD-WRT v24-sp2 (Linux 2.4.37) (98%), Linux 3.2 (98%), Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012 (96%), Linux 4.4 (96%), Microsoft Windows XP SP3 (96%), BlueArc Titan 2100 NAS device (91%)
+No exact OS matches for host (test conditions non-ideal).
+Service Info: Host:  metasploitable.localdomain; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 2 IP addresses (2 hosts up) scanned in 64.16 seconds
+
+
+
+
+04/26/2018-06:06:34.909788  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.131:0
+04/26/2018-06:06:34.909796  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.130:0
+04/26/2018-06:06:34.909928  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:13 -> 192.168.234.131:0
+04/26/2018-06:06:34.909929  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:13 -> 192.168.234.130:0
+04/26/2018-06:06:35.184735  [**] [1:2010937:2] ET POLICY Suspicious inbound to mySQL port 3306 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.131:3306
+04/26/2018-06:06:35.184736  [**] [1:2010937:2] ET POLICY Suspicious inbound to mySQL port 3306 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.130:3306
+04/26/2018-06:06:36.281860  [**] [1:1000003:1] TELNET connection attempt [**] [Classification: (null)] [Priority: 3] {TCP} 192.168.204.140:38757 -> 192.168.234.131:23
+04/26/2018-06:06:36.281888  [**] [1:1000003:1] TELNET connection attempt [**] [Classification: (null)] [Priority: 3] {TCP} 192.168.204.140:38757 -> 192.168.234.130:23
+04/26/2018-06:06:37.294444  [**] [1:2010935:2] ET POLICY Suspicious inbound to MSSQL port 1433 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.131:1433
+04/26/2018-06:06:37.294445  [**] [1:2010935:2] ET POLICY Suspicious inbound to MSSQL port 1433 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.130:1433
+04/26/2018-06:06:38.307189  [**] [1:2010939:2] ET POLICY Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.131:5432
+04/26/2018-06:06:38.307190  [**] [1:2010939:2] ET POLICY Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:38757 -> 192.168.234.130:5432
+04/26/2018-06:06:42.048782  [**] [1:1000003:1] TELNET connection attempt [**] [Classification: (null)] [Priority: 3] {TCP} 192.168.204.140:46820 -> 192.168.234.131:23
+04/26/2018-06:06:42.049238  [**] [1:2010937:2] ET POLICY Suspicious inbound to mySQL port 3306 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:41596 -> 192.168.234.131:3306
+04/26/2018-06:06:42.049292  [**] [1:2010939:2] ET POLICY Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:57752 -> 192.168.234.131:5432
+04/26/2018-06:06:48.056081  [**] [1:2220006:1] SURICATA SMTP no server welcome message [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:25 -> 192.168.204.140:55214
+04/26/2018-06:06:48.056095  [**] [1:2100257:10] GPL DNS named version attempt [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.204.140:51586 -> 192.168.234.131:53
+04/26/2018-06:06:48.062168  [**] [1:2010939:2] ET POLICY Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:57766 -> 192.168.234.131:5432
+04/26/2018-06:06:48.069335  [**] [1:2010939:2] ET POLICY Suspicious inbound to PostgreSQL port 5432 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:57774 -> 192.168.234.131:5432
+04/26/2018-06:06:48.087961  [**] [1:2100257:10] GPL DNS named version attempt [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.168.204.140:51586 -> 192.168.234.131:53
+04/26/2018-06:06:53.055995  [**] [1:2010937:2] ET POLICY Suspicious inbound to mySQL port 3306 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:41636 -> 192.168.234.131:3306
+04/26/2018-06:06:58.061711  [**] [1:2010937:2] ET POLICY Suspicious inbound to mySQL port 3306 [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 192.168.204.140:41654 -> 192.168.234.131:3306
+04/26/2018-06:07:23.733320  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.130:9
+04/26/2018-06:07:23.733324  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.131:9
+04/26/2018-06:07:23.758397  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.130:0
+04/26/2018-06:07:23.758403  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.131:0
+04/26/2018-06:07:23.784787  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.130:37562
+04/26/2018-06:07:23.784799  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:33429
+04/26/2018-06:07:25.036919  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.130:37562
+04/26/2018-06:07:25.036928  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:33429
+04/26/2018-06:07:26.288766  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.130:37562
+04/26/2018-06:07:26.288780  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:33429
+04/26/2018-06:07:27.540064  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.130:37562
+04/26/2018-06:07:27.540068  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:33429
+04/26/2018-06:07:30.601451  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.131:9
+04/26/2018-06:07:30.626807  [**] [1:1000002:1] ICMP connection attempt [**] [Classification: (null)] [Priority: 3] {ICMP} 192.168.204.140:8 -> 192.168.234.131:0
+04/26/2018-06:07:30.653601  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:34885
+04/26/2018-06:07:31.213964  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:34885
+04/26/2018-06:07:31.772989  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:34885
+04/26/2018-06:07:33.115665  [**] [1:2018489:3] ET SCAN NMAP OS Detection Probe [**] [Classification: Attempted Information Leak] [Priority: 2] {UDP} 192.168.204.140:54243 -> 192.168.234.131:34885
+04/26/2018-06:07:53.001647  [**] [1:2220000:1] SURICATA SMTP invalid reply [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:25 -> 192.168.204.140:55214
+04/26/2018-06:08:16.002377  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:3306 -> 192.168.204.140:41654
+04/26/2018-06:08:16.002377  [**] [1:2230015:1] SURICATA TLS invalid record version [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:3306 -> 192.168.204.140:41654
+04/26/2018-06:08:19.000294  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:2121 -> 192.168.204.140:45030
+04/26/2018-06:08:19.000294  [**] [1:2230015:1] SURICATA TLS invalid record version [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:2121 -> 192.168.204.140:45030
+04/26/2018-06:08:24.000819  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:2121 -> 192.168.204.140:45048
+04/26/2018-06:08:24.000819  [**] [1:2230015:1] SURICATA TLS invalid record version [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:2121 -> 192.168.204.140:45048
+04/26/2018-06:08:26.001495  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:3306 -> 192.168.204.140:41672
+04/26/2018-06:08:26.001495  [**] [1:2230015:1] SURICATA TLS invalid record version [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 192.168.234.131:3306 -> 192.168.204.140:41672
